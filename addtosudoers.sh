@@ -3,13 +3,13 @@
 if [ ! -e /etc/sudoers ]
 then
 	echo '/etc/sudoers doesnt exists'
-	exit
+	exit 1
 fi
 
 if [ $# -eq 0 ]
 then
 	echo 'username argument not provided'
-	exit
+	exit 1
 fi
 
 for user in $@
